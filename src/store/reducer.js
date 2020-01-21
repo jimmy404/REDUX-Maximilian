@@ -10,17 +10,17 @@ const reducer = (state = initialState, action) => {
     }
     if (action.type === 'DECREMENT') {
         return {
-            counter: state.counter + 1
+            counter: state.counter - 1
         }
     }
     if (action.type === 'ADD') {
         return {
-            counter: state.counter + 1
+            counter: state.counter + 10
         }
     }
     if (action.type === 'SUBSTRACT') {
         return {
-            counter: state.counter + 1
+            counter: state.counter - 8
         }
     }
     return state;
