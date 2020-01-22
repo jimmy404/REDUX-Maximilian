@@ -1,41 +1,54 @@
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const ADD = 'ADD';
-export const SUBSTRACT = 'SUBSTRACT';
+export const SUBTRACT = 'SUBTRACT';
 export const STORE_RESULT = 'STORE_RESULT';
 export const DELETE_RESULT = 'DELETE_RESULT';
 
-const increment = () => {
+export const increment = () => {
     return {
         type: INCREMENT
     };
 };
-const decrement = () => {
+
+export const decrement = () => {
     return {
         type: DECREMENT
     };
 };
-const add = (value) => {
+
+export const add = ( value ) => {
     return {
         type: ADD,
         val: value
     };
 };
-const substract = (value) => {
+
+export const subtract = ( value ) => {
     return {
-        type: SUBSTRACT,
+        type: SUBTRACT,
         val: value
     };
 };
-const storeResult = (res) => {
+
+export const saveResult = ( res ) => {
     return {
         type: STORE_RESULT,
         result: res
     };
+}
+
+export const storeResult = ( res ) => {
+    return dispatch => {
+        setTimeout( () => {
+            dispatch(saveResult(res));
+        }, 2000 );
+    }
 };
-const deleteResult = (res) => {
+
+export const deleteResult = ( resElId ) => {
     return {
         type: DELETE_RESULT,
-        resultElId: res
+        resultElId: resElId
     };
 };
