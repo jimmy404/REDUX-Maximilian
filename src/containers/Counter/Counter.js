@@ -38,10 +38,10 @@ const mapDispatchToProps = dispatch => {
         onIncrementCounter: () => dispatch(actionCreators.increment()),
         onDecrementCounter: () => dispatch(actionCreators.decrement()),
         onAddCounter: () => dispatch(actionCreators.add(10)),
-        onSubstractCounter: () => dispatch(actionCreators.substract(15)),
+        onSubtractCounter: () => dispatch(actionCreators.subtract(15)),
         onStoreResult: (result) => dispatch(actionCreators.storeResult(result)),
-        onDeleteResult: (id) => dispatch(actionCreators.deleteResult(id)),
-    };
+        onDeleteResult: (id) => dispatch(actionCreators.deleteResult(id))
+    }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
